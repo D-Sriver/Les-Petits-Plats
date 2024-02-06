@@ -33,5 +33,4 @@ const displayRecipes = () => {
     recipeContainer.innerHTML += recipeHTML;
   });
 };
-
-displayRecipes();
+export { displayRecipes };

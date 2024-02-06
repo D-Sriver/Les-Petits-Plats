@@ -12,4 +12,5 @@ const displayRecipeCounter = () => {
 console.log(recipes.length);
 
 // Appeler la fonction pour afficher le nombre total de recettes
-displayRecipeCounter();
+
+export { displayRecipeCounter };

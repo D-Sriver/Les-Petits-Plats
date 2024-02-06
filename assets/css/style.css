@@ -27,29 +27,30 @@ h1, h2, h3, .title {
 
 h1 {
     color: var(--primary-color);
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     transform: scaleY(1.3);
     margin: 0 auto 50px auto;
     max-width: 660px;
 }
 section h1 {
-    margin: 10px;
     letter-spacing: 2px;
-    line-height: 1.3em;
+    line-height: 1.4em;
     text-align: center;
     font-weight: bold;
 }
 
 .container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 1240px;
-    margin: 40px;
+    margin: 20px 0 50px 0;
 }
 .filters-dropdowns{
     display: flex;
-    width: 100%;
+    gap: 70px;
 }
 
 header {
@@ -67,7 +68,7 @@ header .container, .hero {
     background-image: url(../../assets/img/header.png);
     background-size: cover;
     background-position: center;
-    height: 667px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,31 +79,32 @@ header .container, .hero {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 48px auto 0 auto;
-    height: 5%;
-    width: 74%;
+    width: 75%;
 }
 
 .search-bar input {
     flex: 1;
     border: none;
+    font-family: manrope;
+    font-size: 1.3rem;
+    color: var(--light-text-color);
     border-radius: 10px;
     height: 100%;
-    padding: 15px;
+    padding: 10px;
     outline: none;
 }
 
 .search-bar button {
     position: relative;
     background-color: var(--search-button-bg);
-    right: 50px;
+    right: 60px;
     border: none;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -111,7 +113,7 @@ header .container, .hero {
 }
 
 .search-bar img {
-    width: 20px;
+    width: 30px;
 }
 
 /* ------------------FILTERS----------------------- */
@@ -125,12 +127,13 @@ header .container, .hero {
 }
 
 select {
+    font-size: 1.1em;
+    width: 100%;
+    gap: 20px;
     background-color: white;
     border-radius: 10px;
     border: none;
-    padding: 20px;
-    width: 120px;
-    margin: 0 24px 0 0;
+    padding: 20px 90px 20px 20px;
 }
 .counter {
     display: flex;
@@ -154,15 +157,22 @@ select {
     align-items: center;
 }
 .time {
+    font-size: 13px;
     position: relative;
     bottom: 210px;
     background-color: var(--primary-color);
     display: flex;
-    width: 60px;
-    height: 30px;
+    width: 80px;
+    height: 25px;
     border-radius: 25px;
     justify-content: center;
     align-items: center;
+}
+.time p {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
 }
 .recipes {
     display: flex;
@@ -204,6 +214,8 @@ select {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 32px;
+    margin-bottom: 30px;
+
 }
 
 .ingredients-container div{
