@@ -12,7 +12,7 @@
     </header>
     <section class="head">
       <h1>
-        Cherchez parmi plus de 1500 recettes du quotidien, simples et
+        Cherchez parmi plus de <span class="counter-recipe"></span> recettes du quotidien, simples et
         délicieuses
       </h1>
 
@@ -43,8 +43,8 @@
           </select>
         </div>
         <div class="counter">
-          <span class="recipes-count">1500</span> recettes
-        </div>
+          <p class="counter-total"></p>
+      </div>
       </div>
 
       <div class="recipes">
@@ -56,6 +56,7 @@
 
     <script src="scripts/data/recipes.js" type="module" ></script>
     <script src="scripts/index.js" type="module"></script>
+    <script src="scripts/utils/recipe-counter.js" type="module"></script>
     <script src="scripts/Templates/recipe-card.js" type="module"></script>
     </body>
 </html>

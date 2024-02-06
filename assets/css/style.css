@@ -134,12 +134,11 @@ select {
 }
 .counter {
     display: flex;
+    width: 300px;
     align-items: center;
+    justify-content: flex-end;
     font-size: 1.4rem;
     text-transform: uppercase;
-}
-.recipes-count {
-    margin-right: 10px;
 }
 
 .filters-container .title {
