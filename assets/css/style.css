@@ -153,7 +153,7 @@ select {
 }
 .time {
     position: relative;
-    bottom: 260px;
+    bottom: 210px;
     background-color: var(--primary-color);
     display: flex;
     width: 60px;
@@ -168,12 +168,12 @@ select {
     justify-content: center;
     gap: 50px;
     margin: 0 16px;
+    max-width: 1440px;
 }
 
 .recipes article {
     border-radius: 21px;
     max-width: 380px;
-    max-height: 731px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -223,43 +223,9 @@ select {
     margin-top: 8px;
 }
 
-@media (min-width: 600px) {
-    .filters-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    select {
-        width: 120px;
-        margin: 0 24px 0 0;
-    }
-}
-
-
-@media (min-width: 800px) { 
-    header .container {
-        text-align: left;
-    }
-
-    select {
-        width: 150px;
-    }
-
-    .filters-container {
-        margin-bottom: 48px;
-    }
-
-    .recipes article img {
-        height: 250px;
-    }
-}
-
-@media (min-width: 1024px) { 
-    header .container {
-        text-align: left;
-    }
-
-    .hero {
-        height: 600px;
-    }
+footer {
+    width: 200px;
+    padding: 32px 0;
+    text-align: center;
+    color: white;
 }
