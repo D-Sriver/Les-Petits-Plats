@@ -5,7 +5,7 @@ const recipeContainer = document.querySelector('.recipes');
 const generateRecipeHTML = (recipe) => {
   return `
     <article class="recipe-container">
-      <img src="/assets/img/Recipe/${recipe.image}" alt="repas" />
+      <img src="assets/img/Recipe/${recipe.image}" alt="repas" />
       <div class="recipes-description">
         <div class="title-card">
           <h3>${recipe.name}</h3>
