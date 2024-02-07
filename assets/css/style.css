@@ -129,7 +129,7 @@ header .container, .hero {
 select {
     font-size: 1.1em;
     width: 100%;
-    gap: 70x;
+    gap: 70px;
     background-color: white;
     border-radius: 10px;
     border: none;
