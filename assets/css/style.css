@@ -77,6 +77,7 @@ header {
     height: 40px; /* passer de 0 a 40px en js */
     background-color: #FFD15B;
     border-radius: 10px;
+    transition: 0.5s;
 }
 
 .tag p {
