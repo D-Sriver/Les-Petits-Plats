@@ -46,7 +46,7 @@ section h1 {
     align-items: center;
     width: 100%;
     max-width: 1240px;
-    margin: 20px 0 50px 0;
+    margin: 20px 0 20px 0;
 }
 .filters-dropdowns{
     display: flex;
@@ -59,8 +59,28 @@ header {
     left: 50px;
 }
 
-header .container, .hero {
-    text-align: center;
+.tag-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    max-width: 1240px;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    padding: 0px 20px 0px 20px;
+    margin: 10px 0 30px 0;
+    height: 40px; /* passer de 0 a 40px en js */
+    background-color: #FFD15B;
+    border-radius: 10px;
+}
+
+.tag p {
+    margin-right: 10px;
 }
 
 /* ------------------HEAD----------------------- */
@@ -301,6 +321,9 @@ footer {
         width: 100%;
     }
     
+    .counter-total {
+        margin: 10px 0 0 0;
+    }
     select {
         padding: 10px 20px 10px 3px;
 
