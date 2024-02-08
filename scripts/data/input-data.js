@@ -3,7 +3,7 @@ export function addTag() {
   const inputElement = document.getElementById("search");
   const buttonElement = document.getElementById("button");
 
-  buttonElement.addEventListener("click", () => {
+  function LogiqueAddTag() {
     tagElement.style.display = "flex";
     let height = 0;
     const heightIntervalId = setInterval(() => {
@@ -16,5 +16,12 @@ export function addTag() {
     }, 1);
 
     tagElement.textContent = inputElement.value;
+  }
+  // si la toucher entrer -> LogiqueAddTag
+  inputElement.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      LogiqueAddTag();
+    }
   });
+  buttonElement.addEventListener("click", LogiqueAddTag);
 }
