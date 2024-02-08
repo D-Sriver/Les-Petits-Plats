@@ -3,9 +3,12 @@ export function addTag() {
   const inputElement = document.getElementById("search");
   const buttonElement = document.getElementById("button");
 
+  // ajout du tag
   function LogiqueAddTag() {
+    // change le display du tag
     tagElement.style.display = "flex";
     let height = 0;
+    // animation de l'agrandissement du tag
     const heightIntervalId = setInterval(() => {
       if (height < 40) {
         tagElement.style.height = height + "px";
@@ -17,6 +20,7 @@ export function addTag() {
 
     tagElement.textContent = inputElement.value;
   }
+
   // si la toucher entrer -> LogiqueAddTag
   inputElement.addEventListener("keyup", (event) => {
     if (event.key === "Enter" && inputElement.value !== "") {

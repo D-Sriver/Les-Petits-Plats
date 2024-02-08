@@ -1,4 +1,5 @@
 // importation des fonctions à exécuter
+import { appareilInsert, ingredientInsert, ustensilsInsert } from './Templates/list-select.js';
 import { displayRecipes } from './Templates/recipe-card.js';
 import { addTag } from './data/input-data.js';
 import { getAppareil, getIngredients, getUstensils } from './data/list-select-data.js';
@@ -14,6 +15,10 @@ addTag();
 getIngredients();
 getAppareil();
 getUstensils();
+
+ingredientInsert();
+appareilInsert();
+ustensilsInsert();
 
 
 
