@@ -18,10 +18,23 @@ export function addTag() {
     tagElement.textContent = inputElement.value;
   }
   // si la toucher entrer -> LogiqueAddTag
-  inputElement.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
+  inputElement.addEventListener("keyup", (event) => {
+    if (event.key === "Enter" && inputElement.value !== "") {
       LogiqueAddTag();
     }
   });
-  buttonElement.addEventListener("click", LogiqueAddTag);
+
+  // si le bouton est cliqué -> LogiqueAddTag
+  buttonElement.addEventListener("click", () => {
+    if (inputElement.value !== "") {
+      LogiqueAddTag();
+    }
+  });
+
+  // si l'input est vide -> on cache le tag
+  inputElement.addEventListener("input", () => {
+    if (inputElement.value === "") {
+      tagElement.style.display = "none";
+    }
+  });
 }
