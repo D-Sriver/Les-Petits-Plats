@@ -14,7 +14,6 @@ const getIngredients = () => {
     // on retourne le tableau mis à jour
     return uniqueIngredients;
   }, []);
-  console.log('les ingredients sont :', ingredients);
   // on retourne le tableau
   return ingredients;
 };
@@ -26,7 +25,6 @@ const getAppareil = () => {
     }
     return uniqueAppareil;
   }, []);
-  console.log('les appareils sont :', appareil);
   return appareil;
 }
 
@@ -39,9 +37,11 @@ const getUstensils = () => {
     });
     return uniqueUstensils;
   }, []);
-  console.log('les ustensiles sont :', ustensils);
   return ustensils;
 }
+console.dir(getIngredients());
+console.dir(getAppareil());
+console.dir(getUstensils());
 
 export { getAppareil, getIngredients, getUstensils };
 
