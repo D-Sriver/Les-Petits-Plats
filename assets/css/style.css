@@ -1,5 +1,4 @@
 :root {
-    --text-light: 400;
     --text-medium: 500;
     --text-bold: 700;
 
@@ -47,7 +46,7 @@ section h1 {
     align-items: center;
     width: 100%;
     max-width: 1240px;
-    margin: 20px 0 20px 0;
+    margin: 20px 0 6px 0;
 }
 .filters-dropdowns{
     display: flex;
@@ -73,8 +72,8 @@ header {
     display: flex;
     align-items: center;
     font-size: large;
-    padding: 0px 20px 0px 20px;
-    margin: 10px 0 30px 0;
+    padding: 10px 10px 5px 10px;
+    margin: 10px 0 40px 0;
     height: 40px; /* passer de 0 a 40px en js */
     background-color: var(--primary-color);
     border-radius: 10px;
