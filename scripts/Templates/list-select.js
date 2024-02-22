@@ -31,3 +31,20 @@ export function ustensilsInsert() {
     ustensilsSelect.appendChild(option);
   });
 }
+//on écoute la selection de l'utilisateur
+ingredientSelect.addEventListener('change', () => {
+  // on récupère la valeur de l'option sélectionnée (option de la section)
+  const selectedIngredient = ingredientSelect.options[ingredientSelect.selectedIndex];
+  // on affiche la valeur dans la console
+  console.log(selectedIngredient.textContent);
+});
+
+appareilSelect.addEventListener('change', () => {
+  const selectedAppareil = appareilSelect.options[appareilSelect.selectedIndex];
+  console.log(selectedAppareil.textContent);
+});
+
+ustensilsSelect.addEventListener('change', () => {
+  const selectedUstensil = ustensilsSelect.options[ustensilsSelect.selectedIndex];
+  console.log(selectedUstensil.textContent);
+});
