@@ -72,7 +72,7 @@ header {
     display: flex;
     align-items: center;
     font-size: large;
-    padding: 10px 10px 5px 10px;
+    padding: 5px 10px 5px 10px;
     margin: 10px 0 40px 0;
     height: 40px; /* passer de 0 a 40px en js */
     background-color: var(--primary-color);
@@ -165,6 +165,7 @@ select {
     justify-content: flex-end;
     font-size: 1.4rem;
     text-transform: uppercase;
+    font-weight: var(--text-bold);
 }
 
 .filters-container .title {
@@ -325,6 +326,7 @@ footer {
     .counter {
         justify-content: center;
         width: 100%;
+
     }
     
     .counter-total {
