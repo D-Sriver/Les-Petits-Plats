@@ -1,50 +1,60 @@
 // Import des données
 import { getAppareil, getIngredients, getUstensils } from '../data/list-select-data.js';
 
-const ingredientSelect = document.getElementById('ingredient');
-const appareilSelect = document.getElementById('equipment');
-const ustensilsSelect = document.getElementById('utensil');
+function insertOptions(optionsList, items) {
+  items.forEach((item) => {
+    const option = document.createElement('li');
+    option.classList.add('custom-option');
+    option.textContent = item;
+    option.dataset.value = item;
+
+    option.addEventListener('click', () => {
+      const selectedValue = option.dataset.value;
+      console.log(selectedValue);
+    });
+
+    optionsList.appendChild(option);
+  });
+}
+
+// Fonction pour générer et insérer les options dans la catégorie
+function insertCategory(categoryElement, items) {
+  const optionsList = categoryElement.querySelector('.options-list');
+  optionsList.innerHTML = '';
+  insertOptions(optionsList, items);
+}
 
 export function ingredientInsert() {
+  const categoryElement = document.querySelector('.custom-dropdown:nth-child(1)'); 
   const ingredients = getIngredients();
-  ingredients.forEach((ingredient) => {
-    const option = document.createElement('option');
-    option.textContent = ingredient;
-    ingredientSelect.appendChild(option);
-  });
+  insertCategory(categoryElement, ingredients);
 }
 
 export function appareilInsert() {
+  const categoryElement = document.querySelector('.custom-dropdown:nth-child(2)'); 
   const appareils = getAppareil();
-  appareils.forEach((appareil) => {
-    const option = document.createElement('option');
-    option.textContent = appareil;
-    appareilSelect.appendChild(option);
-  });
+  insertCategory(categoryElement, appareils);
 }
 
 export function ustensilsInsert() {
+  const categoryElement = document.querySelector('.custom-dropdown:nth-child(3)');
   const ustensils = getUstensils();
-  ustensils.forEach((ustensil) => {
-    const option = document.createElement('option');
-    option.textContent = ustensil;
-    ustensilsSelect.appendChild(option);
-  });
+  insertCategory(categoryElement, ustensils);
 }
-//on écoute la selection de l'utilisateur
-ingredientSelect.addEventListener('change', () => {
-  // on récupère la valeur de l'option sélectionnée (option de la section)
-  const selectedIngredient = ingredientSelect.options[ingredientSelect.selectedIndex];
-  // on affiche la valeur dans la console
-  console.log(selectedIngredient.textContent);
+
+// Ajouter des écouteurs de changement pour chaque catégorie
+document.querySelectorAll('.custom-dropdown').forEach((categoryElement) => {
+  categoryElement.addEventListener('click', () => {
+    const optionsList = categoryElement.querySelector('.options-list');
+    optionsList.style.display = optionsList.style.display === 'block' ? 'none' : 'block';
+  });
 });
 
-appareilSelect.addEventListener('change', () => {
-  const selectedAppareil = appareilSelect.options[appareilSelect.selectedIndex];
-  console.log(selectedAppareil.textContent);
-});
-
-ustensilsSelect.addEventListener('change', () => {
-  const selectedUstensil = ustensilsSelect.options[ustensilsSelect.selectedIndex];
-  console.log(selectedUstensil.textContent);
+// Fermer la liste déroulante lorsqu'on clique en dehors
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.custom-dropdown')) {
+    document.querySelectorAll('.options-list').forEach((optionsList) => {
+      optionsList.style.display = 'none';
+    });
+  }
 });
